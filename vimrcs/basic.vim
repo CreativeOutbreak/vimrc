@@ -351,6 +351,18 @@ map <leader>x :e ~/buffer.md<cr>
 map <leader>pp :setlocal paste!<cr>
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Boilerplate code
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+augroup html
+        au BufNewFile *.html 0r ~/.vim/htm_head
+        au BufNewFile *.html 19
+augroup END
+augroup php
+        au BufNewFile *.php 0r ~/.vim/php_head
+                au BufNewFile *.php $
+augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
